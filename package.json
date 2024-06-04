@@ -1,17 +1,17 @@
 {
   "name": "dropzone-vue",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": false,
   "author": "Brunino Criniti <crinitib@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/darknessnerd/drop-zone.git"
+    "url": "https://github.com/RemarkableM/drop-zone.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/darknessnerd/drop-zone/issues"
+    "url": "https://github.com/RemarkableM/drop-zone/issues"
   },
-  "homepage": "https://github.com/darknessnerd/drop-zone",
+  "homepage": "https://github.com/RemarkableM/drop-zone",
   "keywords": [
     "vue3",
     "upload",
