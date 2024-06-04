@@ -159,6 +159,7 @@ export default function useUploadXHR({ config, items }) {
         Object.values(files)
           .filter((item) => item.upload.id === uploadId)
           .forEach((item) => {
+            item.file.responses = [...(item.file.responses ?? []), response];
             if (item.upload.chunking) {
               if (item.upload.nextSlice < item.file.size) {
                 allDone = false;
@@ -175,11 +176,9 @@ export default function useUploadXHR({ config, items }) {
                 item.status = STATUS.DONE;
                 // eslint-disable-next-line no-param-reassign
                 item.upload.progress = 100.00;
-                item.file.responses = [...(item.file.responses ?? []), response];
               }
             } else {
               // eslint-disable-next-line no-param-reassign
-              item.file.responses = [response];
               item.status = STATUS.DONE;
               console.debug(`file upload finished ${item.file.name}`);
             }
